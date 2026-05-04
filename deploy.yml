@@ -1,0 +1,9 @@
+- name: Deploy Library Management System
+  hosts: localhost
+  tasks:
+    - name: Start Library Container
+      docker_container:
+        name: lib-app-deployed
+        image: library-system:latest
+        state: started
+        restart_policy: always
